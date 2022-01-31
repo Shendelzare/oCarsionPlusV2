@@ -1,0 +1,66 @@
+server:
+  servlet:
+    context-path : /ocarsionplus
+spring:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+  datasource:
+    url: "jdbc:postgresql://host.docker.internal:5432/ocarsionplusdb"
+    username: ocarsionplus
+    password: ocarsionplus
+    continue-on-error: false
+  mvc:
+    format:
+      date-time: iso
+      date: yyyy-MM-dd
+      time: HH:mm:ss
+  devtools:
+    add-properties: true
+    restart:
+      enabled: true 
+  data:
+    mongodb:
+      uri: mongodb+srv://oCarsion:Plus@cluster0.zgg6t.mongodb.net/oCarsionPlus?retryWrites=true&w=majority
+      database: oCarsionPlus
+  liquibase:
+    enabled: false
+  autoconfigure.exclude: org.keycloak.adapters.springboot.KeycloakSpringBootConfiguration
+logging:
+  level:
+    org:
+      hibernate.SQL: DEBUG
+      hibernate.type.descriptor.sql.BasicBinder: TRACE
+      springframework: DEBUG
+      keycloak: DEBUG  
+    sqltiming: DEBUG
+    resultsettable: DEBUG 
+logging.level.org.keycloak: DEBUG  
+keycloak:
+  realm: master
+  auth-server-url: http://2.139.112.21:8082/auth
+  ssl-required: external
+  resource: ocarsion-msv
+  credentials.secret: f26c268d-ecff-4794-af14-83cb92fa79fa
+  use-resource-role-mappings: true
+  bearer-only: true
+
+ocarsionplus:
+  keycloak:
+    admin:
+      username: admin
+      password: keycloak
+    client.id: 4c283768-86fd-46d2-b2d0-30b2e4355ae9
+    realm.role.name: autenticado
+    client.role.name:  user-app
+
+
+
+  

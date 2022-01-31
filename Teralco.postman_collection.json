@@ -1,0 +1,1161 @@
+{
+	"info": {
+		"_postman_id": "2373870f-cf4d-4ef6-bc32-79862b6c27d2",
+		"name": "Teralco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Coches",
+			"item": [
+				{
+					"name": "gestionMarcas",
+					"item": [
+						{
+							"name": "Crea marca",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ford\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/marcas/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"marcas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recupera marca",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/marcas/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"marcas",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modifica Marca",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Nissan\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/marcas/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"marcas",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina Marca",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/marcas/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"marcas",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "gestionCoches",
+					"item": [
+						{
+							"name": "Crea coche",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombreModelo\": \"Mustang\",\r\n  \"color\": \"ROJO\",\r\n  \"cilindrada\": \"3700\",\r\n  \"potencia\": 305,\r\n  \"idMarca\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recupera coche",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modifica Coche",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombreModelo\": \"Xsara\",\r\n  \"color\": \"BLANCO\",\r\n  \"cilindrada\": 3700,\r\n  \"potencia\": 305,\r\n  \"idMarca\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina Coche",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "gestionPrecios",
+					"item": [
+						{
+							"name": "Crea precio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"valor\":30000.00,\r\n    \"iniFechaVigor\": \"2021-03-20\",\r\n    \"finFechaVigor\": \"2022-03-19\",\r\n    \"coche\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/precios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"precios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recupera precio",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/precios/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"precios",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modifica Precio",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"valor\": \"25000.00\",\r\n    \"iniFechaVigor\": \"2027-03-19\",\r\n    \"finFechaVigor\": \"2029-03-19\",\r\n    \"coche\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/precios/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"precios",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina precio",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/precios/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"precios",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "gestionExtras",
+					"item": [
+						{
+							"name": "Crea extra",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\":\"A/A\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/1/extras",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"1",
+										"extras"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recupera extra",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/extras/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"extras",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modifica extra",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"nombre\":\"techo panoramico\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/extras/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"extras",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina extra",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/extras/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"extras",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Prepara entorno",
+					"item": [
+						{
+							"name": "Crea marca ford",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ford\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/marcas/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"marcas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crea marca nissan",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Nissan\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/marcas/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"marcas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crea marca Mazda",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Mazda\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/marcas/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"marcas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crea coche mustang",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombreModelo\": \"Mustang\",\r\n  \"color\": \"ROJO\",\r\n  \"cilindrada\": 3700,\r\n  \"potencia\": 305,\r\n  \"idMarca\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crea precio al mustang",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"valor\": \"45000.00\",\r\n    \"iniFechaVigor\": \"2023-03-19\",\r\n \"finFechaVigor\": \"2024-03-19\",\r\n    \"coche\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/precios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"precios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modifica Coche mustang involuciona a Mondeo",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombreModelo\": \"Mondeo\",\r\n  \"color\": \"ROJO\",\r\n  \"cilindrada\": 3200,\r\n\"potencia\":305,\r\n  \"idMarca\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crea coche mx-5",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombreModelo\": \"MX-5\",\r\n  \"color\": \"VERDE\",\r\n  \"cilindrada\": 3700,\r\n  \"potencia\": 305,\r\n  \"idMarca\": 1,\r\n  \"idPrecio\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crea precio al mx5",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"valor\": \"18500.00\",\r\n    \"iniFechaVigor\": \"2027-03-20\",\r\n    \"finFechaVigor\": \"2028-03-19\",\r\n    \"coche\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/coches/precios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"coches",
+										"precios"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "gestionUsuarios",
+					"item": [
+						{
+							"name": "registraUsuario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ford\",\r\n  \"contrasena\":\"123456\",\r\n  \"usuario\":\"pepito\"\r\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ocarsionplus/usuarios/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ocarsionplus",
+										"usuarios",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "datos coche",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/ocarsionplus/coches/1?date=23-03-2024",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ocarsionplus",
+								"coches",
+								"1"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "23-03-2024"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "datos coche con filtros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ocarsionplus/coches?filter=color%20eq%20rojo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ocarsionplus",
+								"coches"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "color%20eq%20verde%20AND%20color%20eq%20rojo",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "color%20eq%20rojo"
+								},
+								{
+									"key": "filter",
+									"value": "cilindrada%20gt%20100%20AND%20potencia%20eq%20305",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "marca%20eq%20ford AND color eq verde",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "cilindrada%20lt%203300%20AND%20color%20eq%20verde",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "color%20eq%20verde%20AND%20potencia%20eq%20305",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "marca%20eq%20Ford%20AND%20color%20eq%20rojo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "datos coche OLD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/ocarsionplus/cars?filter=color%20eq%20red",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"ocarsionplus",
+								"cars"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "color%20eq%20red"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "https://desarrollo.teralco.com/auth/realms/prueba-tecnica/protocol/openid-connect/token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "account",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "537981c1-abec-4c5d-9a8a-95adce2da98a",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "pruebatecnica",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pruebatecnica",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://desarrollo.teralco.com/auth/realms/prueba-tecnica/protocol/openid-connect/token",
+					"protocol": "https",
+					"host": [
+						"desarrollo",
+						"teralco",
+						"com"
+					],
+					"path": [
+						"auth",
+						"realms",
+						"prueba-tecnica",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "KEYCLOAK IMPROVISADO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "ocarsion-msv",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "f26c268d-ecff-4794-af14-83cb92fa79fa",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "pepito",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://2.139.112.21:8082/auth/realms/master/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"2",
+						"139",
+						"112",
+						"21"
+					],
+					"port": "8082",
+					"path": [
+						"auth",
+						"realms",
+						"master",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://desarrollo.teralco.com/auth/realms/prueba-tecnica/protocol/openid-connect/token Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "account",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "537981c1-abec-4c5d-9a8a-95adce2da98a",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "pruebatecnica",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pruebatecnica",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://desarrollo.teralco.com/auth/realms/prueba-tecnica/protocol/openid-connect/auth",
+					"protocol": "https",
+					"host": [
+						"desarrollo",
+						"teralco",
+						"com"
+					],
+					"path": [
+						"auth",
+						"realms",
+						"prueba-tecnica",
+						"protocol",
+						"openid-connect",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,59 @@
+
+server:
+  servlet:
+    context-path : /ocarsionplus
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      show-sql: true
+  mvc:
+    format:
+      date-time: iso
+      date: yyyy-MM-dd
+      time: HH:mm:ss
+  devtools:
+    add-properties: true
+    restart:
+      enabled: true 
+  data:
+    mongodb:
+      uri: mongodb+srv://oCarsion:Plus@cluster0.zgg6t.mongodb.net/oCarsionPlus?retryWrites=true&w=majority
+      database: oCarsionPlus
+  liquibase:
+    enabled: false
+  autoconfigure.exclude: org.keycloak.adapters.springboot.KeycloakSpringBootConfiguration
+logging:
+  level:
+    org:
+      hibernate.SQL: DEBUG
+      hibernate.type.descriptor.sql.BasicBinder: TRACE
+      springframework: DEBUG
+    sqltiming: DEBUG
+    resultsettable: DEBUG 
+    
+keycloak:
+  realm: master
+  auth-server-url: http://localhost:8082/auth
+  ssl-required: external
+  resource: ocarsionplus-msv
+  credentials.secret: 64163b5d-9b90-45d8-95f6-d6964352b037
+  use-resource-role-mappings: true
+  bearer-only: true
+liquibase:
+  change-log: classpath:liquibase-outputChangeLog.xml
+
+
+
+
+
+  
